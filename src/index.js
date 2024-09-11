@@ -1,8 +1,12 @@
 import "./sass/main.scss";
 import data from "./assets/data.json";
+import moment from 'moment';
 
 document.addEventListener("DOMContentLoaded", () => {
   const main = document.querySelector("main");
+
+  // const date = moment().format();
+  console.log(dateElement());
 
   data.forEach((data) => {
     renderElement(cardElement(data), main);
@@ -52,6 +56,18 @@ const cardElement = function (data) {
 
   return cardParentElement;
 };
+
+// date element
+const dateElement = function() {
+  const date = createHTMLElement('p', 'date');
+
+  const day = moment().day();
+  const month = moment().month();
+  const year = moment().year();
+
+  date.textContent = `${day}/${month}/${year}`;
+  return date;
+}
 
 // abstract data insertion logic
 // const addDataToElement = function(data) {
