@@ -1,4 +1,4 @@
-// import "./sass/main.scss";
+import "./sass/main.scss";
 import data from "./assets/data.json";
 
 document.addEventListener("DOMContentLoaded", () => {

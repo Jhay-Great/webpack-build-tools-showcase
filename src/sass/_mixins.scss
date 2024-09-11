@@ -1,0 +1,23 @@
+
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex ($direction: false) {
+    display: flex;
+
+    @if $direction == true {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+
+@mixin font-class($size) {
+    .font-#{$size} {
+      font-size: $size;
+    }
+  }
